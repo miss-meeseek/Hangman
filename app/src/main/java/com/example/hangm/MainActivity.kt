@@ -120,7 +120,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    // Function hides the keyboard 
+    // Function hides the keyboard
     @SuppressLint("ServiceCast")
     fun View.hideKeyboard() {
         val imm = context.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
