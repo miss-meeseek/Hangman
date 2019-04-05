@@ -15,3 +15,7 @@ Files to look at:
 HangM\app\src\main\java\com\example\hangm\MainActivity.kt
 HangM\app\src\main\res\layout\activity_main.xml
 HangM\app\src\main\res\values\strings.xml
+
+
+![alt text](https://raw.githubusercontent.com/miss-meeseek/Hangman/master/Hangman/screen1.png)
+![alt text](https://raw.githubusercontent.com/miss-meeseek/Hangman/master/Hangman/screen2.png)
