@@ -19,3 +19,9 @@ HangM\app\src\main\res\values\strings.xml
 
 ![alt text](https://github.com/miss-meeseek/Hangman/blob/master/screen1.png?raw=true)
 ![alt text](https://github.com/miss-meeseek/Hangman/blob/master/screen2.png?raw=true)
+
+
+<p align="center">
+  <img src="Hangman\screen1" width="350" title="hover text">
+  <img src="Hangman\screen2" width="350" alt="accessibility text">
+</p>
