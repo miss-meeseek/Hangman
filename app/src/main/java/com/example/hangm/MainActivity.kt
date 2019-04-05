@@ -23,12 +23,13 @@ class MainActivity : AppCompatActivity() {
     var winner: Int = 0
     private var lives:Int = 0
     private var livesMax:Int = 7
+    private lateinit var dictionary : Array<String>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        imageView = findViewById<ImageView>(R.id.imageView)
+        imageView = findViewById(R.id.imageView)
         imageView.setImageResource(R.drawable.hangman0)
 
         word = this.findViewById(R.id.word)
@@ -37,32 +38,18 @@ class MainActivity : AppCompatActivity() {
         button = this.findViewById(R.id.button)
 
         //Initiate dictionary
-        val array = resources.getStringArray(R.array.dictionary)
-        //Choose word from dictionary
-        val r = Random()
-        val randomNumber = r.nextInt(array.size)
-        secret = array[randomNumber].toString()
-        len = secret.length
-
-        //Create word encrypted with "????"
-        var i = 0
-        while(i < len) {
-            mask += "?"
-            i++
-        }
-        word.text = mask
-        Toast.makeText(applicationContext, "hint: " + array[randomNumber].toString(), Toast.LENGTH_SHORT).show()
+        dictionary = resources.getStringArray(R.array.dictionary)
+        chooseWord()
+        encryptWord()
 
         //Listener for button "TRY"
         button.setOnClickListener {
             val input = editText.text
             editText.hideKeyboard()
 
-            if (input.isNotEmpty()) {
-                //Check if input was correct
+            if (input.isNotEmpty()) { //Check if input was correct
                 checkInput(input)
-            } else {
-                //Show Toast
+            } else { //Show Toast
                 tryMore()
             }
         }
@@ -99,12 +86,12 @@ class MainActivity : AppCompatActivity() {
         checkWinner()
     }
 
-
     //Function shows Toast for user if input was empty or incorrect
     private fun tryMore() {
         Toast.makeText(applicationContext, "Try one more time!", Toast.LENGTH_SHORT).show()
     }
 
+    //Function checks if player wins
     private fun checkWinner() {
         if(winner == len) {
             button.isEnabled = false;
@@ -118,6 +105,25 @@ class MainActivity : AppCompatActivity() {
             word.text = secret
             word.setTextColor(RED)
         }
+    }
+
+    //Choose word from dictionary
+    private fun chooseWord() {
+        val r = Random()
+        val randomNumber = r.nextInt(dictionary.size)
+        secret = dictionary[randomNumber]
+        len = secret.length
+    }
+
+    //Create word encrypted with "????"
+    private fun encryptWord() {
+        var i = 0
+        while(i < len) {
+            mask += "?"
+            i++
+        }
+        word.text = mask
+        Toast.makeText(applicationContext, "hint: $secret", Toast.LENGTH_SHORT).show()
     }
 
     // Function hides the keyboard
