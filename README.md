@@ -12,16 +12,16 @@ Pictures are saved in drawable with names hangman0.png, hangman1.png, … .
 The layout can be repaired.
 
 Files to look at:
+
 HangM\app\src\main\java\com\example\hangm\MainActivity.kt
+
 HangM\app\src\main\res\layout\activity_main.xml
+
 HangM\app\src\main\res\values\strings.xml
 
 
+
+
 ![alt text](https://github.com/miss-meeseek/Hangman/blob/master/screen1.png?raw=true)
+
 ![alt text](https://github.com/miss-meeseek/Hangman/blob/master/screen2.png?raw=true)
-
-
-<p align="center">
-  <img src="Hangman\screen1" width="350" title="hover text">
-  <img src="Hangman\screen2" width="350" alt="accessibility text">
-</p>
