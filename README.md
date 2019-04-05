@@ -17,5 +17,5 @@ HangM\app\src\main\res\layout\activity_main.xml
 HangM\app\src\main\res\values\strings.xml
 
 
-![alt text](https://raw.githubusercontent.com/miss-meeseek/Hangman/master/Hangman/screen1.png)
-![alt text](https://raw.githubusercontent.com/miss-meeseek/Hangman/master/Hangman/screen2.png)
+![alt text](https://github.com/miss-meeseek/Hangman/blob/master/screen1.png?raw=true)
+![alt text](https://github.com/miss-meeseek/Hangman/blob/master/screen2.png?raw=true)
